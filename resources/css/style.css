@@ -4,6 +4,13 @@ body{
   font-family: Arial, sans-serif;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
 header{
   width: 100vw;
   height: 4rem;
@@ -19,10 +26,13 @@ nav ul{
 
 .jumbatron{
   background-color: hsla(0, 0%, 85%, 0.7);
+
 }
 
 .jumbatron img{
-  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+
 }
 
 .jumbatron h1{
@@ -38,8 +48,8 @@ nav ul{
 }
 
 div.start{
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }
 
 .btn {
@@ -49,5 +59,46 @@ div.start{
     padding: 15px 32px;
     text-align: center;
     width: 70%;
+}
+
+/*can this be condensed*/
+.notices{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 80%;
+  margin: 2rem auto;
+
+}
+
+.notice{
+
+
+}
+
+.notice img{
+  max-width: 100%;
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+}
+
+div.read-more{
+  max-width: 100%;
+  flex-grow: 1;
+  padding: 1rem 2.25rem;
+}
+
+.thesis video{
+  max-width: 100%;
+}
+
+
+div.learning{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 
 }
