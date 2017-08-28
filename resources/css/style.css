@@ -1,104 +1,209 @@
+/*General Styles */
 
-body{
-  color: hsla(0, 0%, 32%, 1);
-  font-family: Arial, sans-serif;
+body {
+  color: hsla(18, 5.7%, 34.3%, 1);
+  font-family: Palanquin, Arial, sans-serif;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-header{
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+/*Header */
+
+header {
   width: 100vw;
   height: 4rem;
+  background-color: white;
 }
 
-nav ul{
+nav.mob-only ul {
   height: 4rem;
-  width: auto;
+  width: 90vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.jumbatron{
-  background-color: hsla(0, 0%, 85%, 0.7);
 
+/* Media Queries for Nav Bar - Directs Changes for Desktop Size */
+
+@media only screen and (min-width: 470px) {
+  .container {
+    width: 90vw;
+    margin: auto;
+  }
+  nav.dktop-only {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+  }
+  li {
+    display: inline;
+  }
+  nav.dktop-only li {
+    padding-right: 1rem;
+  }
+  ul.logo {
+    display: flex;
+    align-items: center;
+  }
+  ul.logo>li:first-child {
+    padding-right: 0;
+  }
+  span.word-one, span.word-two {
+    text-transform: uppercase;
+  }
+  span.word-one {
+    font-weight: bold;
+  }
+  span.word-two {
+    opacity: 0.45;
+  }
 }
 
-.jumbatron img{
+.jumbatron {
+  background-color: hsla(15, 3.8%, 79.2%, 0.5);
+}
+
+.jumbatron img {
   max-width: 100%;
   overflow: hidden;
-
 }
 
-.jumbatron h1{
+.jumbatron h1 {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 2rem 1rem;
 }
 
-.jumbatron p{
+.jumbatron p {
   font-size: 1.4rem;
   font-weight: bold;
   margin: 1.5rem 1rem;
 }
 
-div.start{
-display: flex;
-justify-content: center;
+div.start {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-    background-color: hsla(0, 0%, 25%, 0.7);
-    color: white;
-    font-weight: bold;
-    padding: 15px 32px;
-    text-align: center;
-    width: 70%;
+  background-color: hsla(168, 13.4%, 44%, 0.98);
+  color: white;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  width: 70%;
+  transition: background-color 200ms ease-in-out 10ms, opacity 300ms ease-in-out 10ms, scale 200ms;
 }
 
+.btn:hover {
+  background-color: hsla(168, 19%, 27%, 1);
+}
+
+.press:active {
+  transform: scale(0.95, 1);
+}
+
+
 /*can this be condensed*/
-.notices{
+
+.notices {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
   width: 80%;
   margin: 2rem auto;
-
 }
 
-.notice{
+.notice {}
 
-
-}
-
-.notice img{
+.notice img {
   max-width: 100%;
   flex-grow: 1;
   padding: 1rem 1.5rem;
 }
 
-div.read-more{
+div.read-more {
   max-width: 100%;
   flex-grow: 1;
   padding: 1rem 2.25rem;
+  line-height: 1.75rem;
 }
 
-.thesis video{
+.read-more-span {
+  color: hsla(200, 83.8%, 21.8%, 1);
+  font-weight: 500;
+  transform: text-decoration 1000ms;
+  transform-origin: left;
+  border-bottom: none;
+}
+
+.read-more-span:hover {
+  text-decoration: underline;
+}
+
+.thesis video {
   max-width: 100%;
 }
 
-
-div.learning{
+div.learning {
   width: 100%;
   display: flex;
   flex-direction: column;
-
   align-items: center;
+}
 
+.learning .btn {
+  margin: 0.5rem 0;
+  background-color: hsla(199, 83.8%, 21.8%, 0.6);
+}
+
+.learning .btn:hover {
+  margin: 0.5rem 0;
+  background-color: hsla(200, 83.8%, 21.8%, 1);
+}
+
+.thesis h2 {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 470px) {
+  .mob-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .dktop-only {
+    display: none;
+  }
 }
