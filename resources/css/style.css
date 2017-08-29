@@ -3,14 +3,21 @@
 body {
   color: hsla(18, 5.7%, 34.3%, 1);
   font-family: Palanquin, Arial, sans-serif;
+}
 
+img {
+  max-width: 100%;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2rem 0;
 }
 
 h2 {
@@ -19,7 +26,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: bold;
 }
 
@@ -54,6 +61,7 @@ nav.mob-only ul {
     justify-content: space-between;
     align-items: center;
     height: 4rem;
+    margin: auto;
   }
   li {
     display: inline;
@@ -84,30 +92,29 @@ nav.mob-only ul {
 
 .jumbatron {
   background-color: hsla(15, 3.8%, 79.2%, 0.5);
-
   overflow: hidden;
-
+  max-width: 100%;
 }
 
 .jumbatron img {
   max-width: 100%;
-  overflow: hidden;
 }
 
-.jumbatron h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 2rem 0;
+.column-mob {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+}
+
+.main img {
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .jumbatron p {
   font-size: 1.4rem;
   font-weight: bold;
   margin: 1.5rem 0;
-}
-
-.jumbatron-text{
-  margin-left: 1rem;
 }
 
 .btn {
@@ -124,10 +131,10 @@ nav.mob-only ul {
   justify-content: center;
 }
 
-.btn p{
-
+.btn p {
   padding: 0.5rem 2rem;
 }
+
 .btn:hover {
   background-color: hsla(168, 19%, 27%, 1);
 }
@@ -136,14 +143,23 @@ nav.mob-only ul {
   transform: scale(0.95, 1);
 }
 
+
 /* Media Queries for Jumatron - Directs Changes for Desktop Size */
 
 @media only screen and (min-width: 470px) {
-  div.jumbatron{
+  div.jumbatron {
     display: flex;
-      padding: 0.5rem;
-    }
-
+  }
+  div.jumbatron-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 24rem;
+  }
+  .jumbatron h1 {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
 }
 
 
@@ -153,30 +169,31 @@ nav.mob-only ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: hidden;
-  width: 80%;
-  margin: 2rem auto;
 }
 
-.notice {}
-
-.notice img {
-  max-width: 100%;
-  flex-grow: 1;
-  padding: 1rem 1.5rem;
-}
+.notice p{font-size: 1rem;
+line-height: 1.2rem;}
 
 @media only screen and (min-width: 470px) {
-
+  .container-main-sub {
+    margin-left: 2rem;
+    margin: 1rem 2rem;
+    padding: 0.5rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .container-main-sub img {
+    padding: 0;
+  }
+  .sub .notice {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
-}
 
-
-div.read-more {
-  max-width: 100%;
-  flex-grow: 1;
-  padding: 1rem 2.25rem;
-  line-height: 1.75rem;
+.read-more{
+  line-height: 1.15rem;
 }
 
 .read-more-span {
@@ -190,9 +207,6 @@ div.read-more {
 .read-more-span:hover {
   text-decoration: underline;
 }
-
-
-
 
 .thesis video {
   max-width: 100%;
@@ -234,8 +248,34 @@ footer {
   .mob-only {
     display: none;
   }
-  .main{
-    width: 60%;
+
+  .container-main-sub {
+
+  }
+  .main {
+
+width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+  .sub {
+width: 38%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .read-more {
+margin-left: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  .sub {
+    margin-left: 1rem;
+  }
+  .sub img{
+    width: 35%;
   }
 }
 
@@ -243,4 +283,9 @@ footer {
   .dktop-only {
     display: none;
   }
+  .container-main-sub {
+    display: none;
+  }
+
+
 }
